@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<!-- <div class="center"> <h1>My Incidents</h1> </div> -->
+
+<h1>My Incidents</h1>
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Incident number</th>
+      <th>Subject</th>
+      <th>Status</th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @incidents.each do |incident| %>
+      <tr>
+        <td><%= incident.incident_number %></td>
+        <td><%= incident.subject %></td>
+        <td><%= incident.status %></td>
+        <td><%= link_to 'Show', incident %></td>
+        <td><%= link_to 'Edit', edit_incident_path(incident) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Incident', new_incident_path, class: "btn btn-small btn-success" %>

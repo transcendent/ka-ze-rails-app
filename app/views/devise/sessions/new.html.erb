@@ -6,14 +6,14 @@
 
 <div class="form-group">
 	<label class="control-label col-sm-2"><%= f.label :email %></label>
-	<div class="col-sm-4 controls" style="margin-top: 7px; margin-bottom: 7px">
+	<div class="col-sm-4 controls input-separator">
 			<%= f.email_field :email, autofocus: true, :class => 'form-control' %>		 			
 	</div>
 </div>
 
 <div class="form-group">
 	<label class="control-label col-sm-2"><%= f.label :password %></label>
-	<div class="col-sm-4 controls" style="margin-top: 7px; margin-bottom: 7px">
+	<div class="col-sm-4 controls input-separator">
 			<%= f.password_field :password, autocomplete: "off", :class => 'form-control' %>		 			
 	</div>
 </div>
@@ -21,7 +21,7 @@
 <% if devise_mapping.rememberable? -%>
 	<div class="form-group">
 		<label class="control-label col-sm-2"><%= f.label :remember_me %></label>
-		<div class="col-sm-4 controls" style="margin-top: 7px; margin-bottom: 7px">
+		<div class="col-sm-4 controls input-separator">
 			<%= f.check_box :remember_me %>		 			
 		</div>
 	</div>

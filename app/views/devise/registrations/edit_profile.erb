@@ -1,16 +1,30 @@
 <h4>Update your profile</h4>
 
-    <%= form_for(@account, url: accounts_update_profile_path) do |f| %>
+<%= form_for(@account, url: accounts_update_profile_path, :html => { :role => 'form' , :class => 'form-horizontal'}) do |f| %>
       <%= render 'devise/shared/error_messages', object: f.object %>
 
-      <%= f.label :first_name %>
-      <%= f.text_field :first_name, class: 'form-control' %>
+	<div class="form-group">
+		<label class="control-label col-sm-2"><%= f.label :first_name %></label>
+		<div class="col-sm-4 controls input-separator" >
+			<%= f.text_field :first_name, :class => 'form-control' %>		 			
+		</div>
+	</div>
 
-      <%= f.label :last_name %>
-      <%= f.text_field :last_name, class: 'form-control' %>
+	<div class="form-group">
+		<label class="control-label col-sm-2"><%= f.label :last_name %></label>
+		<div class="col-sm-4 controls input-separator" >
+			<%= f.text_field :last_name, :class => 'form-control' %>		 			
+		</div>
+	</div>
 
-      <%= f.label :phone %>
-      <%= f.text_field :phone, class: 'form-control' %>
+	<div class="form-group">
+		<label class="control-label col-sm-2"><%= f.label :phone %></label>
+		<div class="col-sm-4 controls input-separator" >
+			<%= f.telephone_field :phone, :class => 'form-control' %>		 			
+		</div>
+	</div>
+	
+	<br/>
 
-      <%= f.submit "Save changes", class: "btn btn-small btn-success" %>
-    <% end %>
+     <%= f.submit "Save changes", class: "btn btn-small btn-success" %>
+<% end %>

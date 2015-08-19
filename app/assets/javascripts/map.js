@@ -12,9 +12,11 @@ function show_map(position) {
   var readOnly = Boolean($('#incident_readonly').val());
   if (!latitude) {
 	  latitude = position.coords.latitude;
+	  $('#incident_latitude').val(latitude);
   } 
   if (!longitude) {
-	  longitude = position.coords.longitude;	
+	  longitude = position.coords.longitude;
+	  $('#incident_longitude').val(longitude);	
   }
   var map = L.mapbox.map('map', 'mapbox.streets').setView([latitude, longitude], 16);
   set_up_marker(latitude,longitude, map, readOnly);

@@ -6,7 +6,11 @@ class IncidentsController < ApplicationController
   # GET /incidents
   # GET /incidents.json
   def index
-    @incidents = Incident.where(account: current_account)
+    if current_account.viewAllIncidents
+      @incidents = Incident.all
+    else
+      @incidents = Incident.where(account: current_account)
+    end
     # render 'layouts/front_test'
   end
 

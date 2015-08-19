@@ -9,12 +9,21 @@ one:
   first_name: 'John'
   phone: '123 123 1231'
   email: 'test_account@test.com'
+  viewAllIncidents: false
   
 two: 
   last_name: 'Joel'
   first_name: 'Billy'
   phone: '123 123 1211'
   email: 'test_account2@test.com'
+  viewAllIncidents: false
   
+integration:
+  last_name: 'integration'
+  first_name: 'integration'
+  phone: '123 123 1241'
+  email: 'integration@testdatafake.com'
+  viewAllIncidents: true
+ 
 
  

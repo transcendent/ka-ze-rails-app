@@ -17,6 +17,15 @@ include Devise::TestHelpers
     assert_not_nil assigns(:incidents)
     assert(assigns(:incidents).length == 2, 'expecting two incidents for the test_account@test.com user, got ' + assigns(:incidents).length.to_s)
   end
+  
+  test "admin should see all incidents" do
+    sign_in Account.find_by email: 'integration@testdatafake.com'
+    get :index
+    assert_response :success
+    assert_not_nil assigns(:incidents)
+    assert(assigns(:incidents).length == Incident.count, 'admin user should be able to see all incidents, saw ' + assigns(:incidents).length.to_s + ' vs ' +  Incident.count.to_s)
+ end
+    
 
   test "should get new" do
     get :new
@@ -77,7 +86,6 @@ include Devise::TestHelpers
     assert_redirected_to incident_path(assigns(:incident))
   end
 
-  
   def remove_incident(incident_id)
     sfdc_id = @client.find('Case', incident_id, 'Rails_ID__c').Id
     assert(@client.destroy('Case', sfdc_id), "case cannot be removed")

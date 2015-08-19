@@ -6,4 +6,4 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-Account.create!(first_name:'Integration', last_name: 'User', phone: '416-357-9321', email: 'admin@integration.com', password:'int3grat3', password_confirmation:'int3grat3')
+Account.create!(first_name:'Integration', last_name: 'User', phone: '416-357-9321', email: 'admin@integration.com', password:'int3grat3', password_confirmation:'int3grat3', viewAllIncidents: true)

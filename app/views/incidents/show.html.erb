@@ -1,5 +1,3 @@
-
-<%= javascript_include_tag :map %>
 <p id="notice"><%= notice %></p>
 
 <h4>Incident <%= @incident.incident_number %></h4>
@@ -57,3 +55,4 @@
 
 <%= link_to 'Edit', edit_incident_path(@incident), class: "btn btn-small btn-success" %> 
 <%= link_to 'Back', incidents_path, class: "btn btn-small btn-success" %>
+<%= javascript_include_tag :map %>

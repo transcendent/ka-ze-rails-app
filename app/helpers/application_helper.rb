@@ -1,10 +1,6 @@
 module ApplicationHelper
 	def initialize_client
-      Restforce.new :username => Rails.application.secrets.sfdc_user_name,
-       :password => Rails.application.secrets.sfdc_password,
-       :security_token => Rails.application.secrets.sfdc_security_token,
-       :client_id      => Rails.application.secrets.sfdc_client_id,
-       :client_secret  => Rails.application.secrets.sfdc_client_secret
+      Restforce.new
     end 
 
     # def gravatar_for(user, options={size: 100})

@@ -14,5 +14,5 @@
 //= require jquery_ujs
 //= require bootstrap
 //= require turbolinks
-//= stub map
 //= require_tree .
+//= stub map.js.erb

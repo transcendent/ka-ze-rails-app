@@ -1,4 +1,6 @@
-<p id="notice"><%= notice %></p>
+<% if notice != nil %>
+	<p id="notice"><%= notice %></p>
+<% end %>
 
 <h4>Incident <%= @incident.incident_number %></h4>
 <div class="incident-box">

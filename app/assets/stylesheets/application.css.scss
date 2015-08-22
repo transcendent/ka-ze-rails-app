@@ -52,7 +52,7 @@ pre.ui-coordinates {
 	border-style: solid;
 	border-width: 2px;
 	border-radius: 5px;
-	border-color: grey;
+	border-color: #CCCCCC;
 }
 
 .incident-internal {
@@ -77,6 +77,37 @@ pre.ui-coordinates {
 
 .menu-icon {
 	padding-right:15px;
+}
+
+.table-bordered {
+  border: 1px solid #CCCCCC;
+}
+
+.btn-success {
+  background-color: #8EC400;
+  border-color: #8EC400;
+}
+
+.control-label {
+  color: #333333;
+}
+
+.form-control-static {
+  color: #666666;
+}
+
+h4 {
+  color: #333333;	
+}
+
+.brand
+{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    text-align: center;
+    margin-left: auto;
+	margin-right: auto;
 }
 
 

@@ -32,7 +32,16 @@ div {
 }
 
 #notice {
-  color: green;
+  background-color: #dfdfdf;
+  color: black;
+  padding: 5px 5px 5px 5px;
+}
+
+#error_explanation {
+  background-color: #dfdfdf;
+  color: black;
+  padding: 5px 5px 5px 5px;
+  margin-bottom:10px;
 }
 
 

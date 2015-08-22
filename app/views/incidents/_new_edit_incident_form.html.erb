@@ -3,11 +3,9 @@
 	<% if @incident.errors.any? %>
   		<div id="error_explanation">
     		<label><%= pluralize(@incident.errors.count, "error") %> prohibited this incident from being saved:</label>
-    		<ul>
     			<% @incident.errors.full_messages.each do |message| %>
-      				<li><%= message %></li>
+      			<br/><%= message %>
     			<% end %>
-    		</ul>
   		</div>
 	<% end %>		
 		

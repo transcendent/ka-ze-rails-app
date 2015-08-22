@@ -62,9 +62,6 @@ class IncidentsController < ApplicationController
           render :show, status: :ok, location: @incident
         }
       else
-        @incident.error.each do |message|
-          puts message
-        end
         format.html { render :edit }
         format.json { render json: @incident.errors, status: :unprocessable_entity }
       end

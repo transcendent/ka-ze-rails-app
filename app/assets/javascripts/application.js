@@ -15,4 +15,4 @@
 //= require bootstrap
 //= require turbolinks
 //= require_tree .
-//= stub map.js.erb
+//= stub map

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ka-ze</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+  <script src='https://api.tiles.mapbox.com/mapbox.js/v2.2.1/mapbox.js'></script>
+  <link href='https://api.tiles.mapbox.com/mapbox.js/v2.2.1/mapbox.css' rel='stylesheet' />
+</head>
+<body>
+	<header>
+	        <nav class="navbar navbar-default navbar-static-top" role="navigation">
+				<div class="container-fluid">
+	                <div class="navbar-header  brand">
+						<ul class="nav">
+							<li>
+	                        	<a href="/">
+	                                <%= image_tag("logo_top.png", style: "max-width: 50px;")  %>
+	                        	</a>
+							</li>
+						</ul>
+	                </div>
+	                <% if account_signed_in? %>
+	                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	                        <ul class="nav navbar-nav navbar-right">
+	                                <li class="dropdown">
+											<a href="#" class="dropdown-toggle" data-toggle="dropdown"/>
+												<%= image_tag("menu.png",style: "max-width: 30px; margin-right: 15px")  %>
+											</a>
+	                                        <ul class="dropdown-menu">
+	                                                <li>
+	                                                        <a href="#"><%= link_to('Change Password', edit_account_registration_path) %></a>
+	                                                </li>
+	                                                <li>
+	                                                        <a href="#"><%= link_to('Update My Account', accounts_edit_profile_path) %></a>
+	                                                </li>
+	                                                <li class="divider">
+	                                                </li>
+	                                                <li>
+	                                                        <%= link_to('Logout', destroy_account_session_path, :method => :delete) %>
+	                                                </li>
+	                                        </ul>
+	                                </li>
+	                        </ul>
+	                </div>
+	            </div>
+	    		<% end %>
+	        </nav>
+	</header>
+
+	<div class="container">
+	        <%= yield %>
+	</div>
+</body>
+</html>

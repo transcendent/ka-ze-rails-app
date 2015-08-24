@@ -1,0 +1,60 @@
+<% if notice != nil %>
+	<p id="notice"><%= notice %></p>
+<% end %>
+
+<h4>Incident <%= @incident.incident_number %></h4>
+<div class="incident-box">
+	<div class="incident-internal">
+		<form class="form-horizontal" role="form">
+			<div class="form-group">
+				<label class="control-label col-sm-2">Subject</label>
+				<div class="col-sm-10">
+					<p class="form-control-static"><%= @incident.subject %></p>
+				</div>
+			</div>
+			<span class="field-separator col-xs-12"></span>
+			<div class="form-group">
+				<label class="control-label col-sm-2">Status</label>
+				<div class="col-sm-10">
+					<p class="form-control-static"><%= @incident.status %></p>
+				</div>
+			</div>
+			<span class="field-separator col-xs-12"></span>
+			<div class="form-group">
+				<label class="control-label col-sm-2">Description</label>
+				<div class="col-sm-10">
+					<p class="form-control-static"><%= @incident.description %></p>
+				</div>
+			</div>
+			<span class="field-separator col-xs-12"></span>
+			<div class="form-group">
+				<label class="control-label col-sm-2">Closed ?</label>
+				<div class="col-sm-10">
+					<p class="form-control-static"><%= @incident.is_closed %></p>
+				</div>
+			</div>
+			<span class="field-separator col-xs-12"></span>
+			<div class="form-group">
+				<label class="control-label col-sm-2">Closed date</label>
+				<div class="col-sm-10">
+					<p class="form-control-static"><%= @incident.closed_date %></p>
+				</div>
+			</div>	
+		</form>
+	</div>
+</div>
+<h4>Incident Location </h4>	
+<div class="incident-box">
+	<div class="incident-internal">
+        <div id='map'></div>
+	</div>
+</div>
+<br/>
+
+<input type="hidden" id="incident_latitude" value="<%= @incident.latitude %>"/>
+<input type="hidden" id="incident_longitude" value="<%= @incident.longitude %>"/>
+<input type="hidden" id="incident_readonly" value="true"/>
+
+<%= link_to 'Edit', edit_incident_path(@incident), class: "btn btn-small btn-success" %> 
+<%= link_to 'Back', incidents_path, class: "btn btn-small btn-success" %>
+<%= javascript_include_tag :map %>

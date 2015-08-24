@@ -1,0 +1,47 @@
+<%= form_for(@incident, :html => { :role => 'form' , :class => 'form-horizontal'}) do |f| %>
+		
+	<% if @incident.errors.any? %>
+  		<div id="error_explanation">
+    		<label><%= pluralize(@incident.errors.count, "error") %> prohibited this incident from being saved:</label>
+    			<% @incident.errors.full_messages.each do |message| %>
+      			<br/><%= message %>
+    			<% end %>
+  		</div>
+	<% end %>		
+		
+	<div class="incident-box">
+		<div class="incident-internal">
+			<div class="form-group">
+				<label class="control-label col-sm-2"><%= f.label :subject %></label>
+				<div class="col-sm-10 controls input-separator">
+						<%= f.text_field :subject, :size => 82, :class => 'form-control' %>		 			
+				</div>
+			</div>
+			<span class="field-separator col-xs-12"></span>
+			<div class="form-group">
+				<label class="control-label col-sm-2"><%= f.label :description %></label>
+				<div class="col-sm-10 controls input-separator">
+						<%= f.text_area :description, :rows => 10, :cols => 80, :class=> 'form-control' %>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<h4>Incident Location </h4>	
+	<div class="incident-box">
+	        <div id='map'></div>
+	</div>
+   <%= f.hidden_field :latitude %>
+   <%= f.hidden_field :longitude %>
+	<input type="hidden" id="incident_readonly"/>
+	<br/>
+
+  <div class="actions">
+    <%= f.submit :class => 'btn btn-small btn-success' %>
+  </div>
+
+
+<% end %>	
+
+<br/>
+

@@ -1,0 +1,69 @@
+// Copyright 2015 Deloitte. Inc
+// 
+// This file is part of Ka-Ze-Rails-App.
+//
+// Ka-Ze-Rails-App is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 2 of the License, or
+// (at your option) any later version.
+// 
+// Ka-Ze-Rails-App is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with Ka-Ze-Rails-App.  If not, see https://github.com/transcendent/ka-ze-rails-app/blob/master/LICENSE
+
+var marker;
+var latitude;
+var longitude;
+
+function set_initial_location() {
+	latitude = $('#incident_latitude').val();
+	longitude = $('#incident_longitude').val();
+	// if the attributes are already set then go ahead and show the map
+	if (latitude) {
+		show_map();
+	}
+	// otherwise do a geolocation and then show the map
+	else {
+		navigator.geolocation.getCurrentPosition(post_geolocate);
+	}	
+}
+
+function post_geolocate(position) {
+	latitude = position.coords.latitude;
+	$('#incident_latitude').val(latitude);
+	longitude = position.coords.longitude;
+	$('#incident_longitude').val(longitude);			
+	show_map();
+}
+
+function show_map() {
+	var readOnly = Boolean($('#incident_readonly').val());
+	L.mapbox.accessToken = '<%= ENV["MAPBOX_ACCESS_TOKEN"] %>';
+	var map = L.mapbox.map('map', 'mapbox.streets');
+	map.setView([latitude, longitude], 16);
+	set_up_marker(latitude, longitude, map, readOnly);
+}
+
+function set_up_marker(latitude, longitude, map, readOnly) {
+	marker = L.marker([latitude, longitude], {
+		icon: L.mapbox.marker.icon({
+			'marker-color': '#8EC400'
+		}),
+		draggable: !readOnly
+	}).addTo(map);
+
+	marker.on('dragend', ondragend);
+
+}
+
+function ondragend() {
+	var m = marker.getLatLng();
+	$('#incident_latitude').val(m.lat);
+	$('#incident_longitude').val(m.lng);
+}
+
+set_initial_location();

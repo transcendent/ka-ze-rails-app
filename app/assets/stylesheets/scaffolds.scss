@@ -1,0 +1,50 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+/* rails overrides */
+
+body {
+  background-color: #fff;
+  color: #333;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+}
+
+label {
+  font-weight: normal;
+}
+
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+}
+
+pre {
+  background-color: #eee;
+  font-size: 11px;
+}
+
+
+div {
+  &.field, &.actions {
+    margin-bottom: 10px;
+  }
+}
+
+#notice {
+  background-color: #dfdfdf;
+  color: black;
+  padding: 5px 5px 5px 5px;
+}
+
+#error_explanation {
+  background-color: #dfdfdf;
+  color: black;
+  padding: 5px 5px 5px 5px;
+  margin-bottom:10px;
+}
+
+
+
+
+

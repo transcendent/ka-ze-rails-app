@@ -1,0 +1,40 @@
+<% if flash[:alert] %>
+  <p id="notice"><%= flash[:alert] %></p>
+<% end %>
+<h2>Log in</h2>
+<%= form_for(resource, as: resource_name, url: session_path(resource_name), :html => { :role => 'form' , :class => 'form-horizontal'}) do |f| %>
+
+<div class="form-group">
+	<label class="control-label col-sm-2"><%= f.label :email %></label>
+	<div class="col-sm-4 controls input-separator">
+			<%= f.email_field :email, autofocus: true, :class => 'form-control' %>		 			
+	</div>
+</div>
+
+<div class="form-group">
+	<label class="control-label col-sm-2"><%= f.label :password %></label>
+	<div class="col-sm-4 controls input-separator">
+			<%= f.password_field :password, autocomplete: "off", :class => 'form-control' %>		 			
+	</div>
+</div>
+
+<% if devise_mapping.rememberable? -%>
+	<div class="form-group">
+		<label class="control-label col-sm-2"><%= f.label :remember_me %></label>
+		<div class="col-sm-4 controls input-separator">
+			<%= f.check_box :remember_me %>		 			
+		</div>
+	</div>
+ <% end -%>
+
+<br/>
+
+  <div class="actions">
+    <%= f.submit "Log In", :class => 'btn btn-small btn-success' %>
+	<%= link_to 'Sign Up', new_account_registration_path, class: "btn btn-small btn-success" %>
+  </div>
+<% end %>
+
+
+
+

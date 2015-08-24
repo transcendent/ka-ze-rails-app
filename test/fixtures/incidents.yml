@@ -1,0 +1,46 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  incident_number: MyString
+  closed_date: 2015-06-22
+  description: MyString
+  is_closed: false
+  status: MyString
+  subject: MyString
+  account: 
+
+two:
+  incident_number: MyString
+  closed_date: 2015-06-22
+  description: MyString
+  is_closed: false
+  status: MyString
+  subject: MyString
+  account: 
+      
+three:
+  incident_number: MyString
+  closed_date: 2015-06-22
+  description: MyString
+  is_closed: false
+  status: MyString
+  subject: MyString
+  account: one
+
+four:
+  incident_number: MyString
+  closed_date: 2015-06-22
+  description: MyString
+  is_closed: false
+  status: MyString
+  subject: MyString
+  account: one 
+      
+five:
+  incident_number: MyString
+  closed_date: 2015-06-22
+  description: MyString
+  is_closed: false
+  status: MyString
+  subject: MyString
+  account: two

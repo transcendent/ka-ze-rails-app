@@ -33,7 +33,7 @@ Update the Heroku Account Details custom settings with the URL for the Heroku ap
 
 Sign up for a Mapbox account and obtain an access key. This will be required for setting up the Heroku application.
 
-<i>Heroku<i>
+<i>Heroku</i>
 
 Git clone this Github repo
 

@@ -109,14 +109,14 @@ class IncidentsController < ApplicationController
 
   def update_incident_record_sfdc
     client = initialize_client
-    client.upsert!('Case','Rails_ID__c', Rails_ID__c: @incident.id, Description: @incident.description, Subject: @incident.subject, AccountId: @incident.account.account_number, location__latitude__s: @incident.latitude, location__longitude__s: @incident.longitude, 'Last_Update_From_Portal__c' => true)
+    client.upsert!('Case','Rails_ID__c', Rails_ID__c: @incident.id, Description: @incident.description, Subject: @incident.subject, AccountId: @incident.account.account_number, location__latitude__s: @incident.latitude, location__longitude__s: @incident.longitude, Last_Update_From_Portal__c: true)
   end
 
   def create_incident_record_sfdc
     client = initialize_client
     randomize_incident_id
     # don't forget to include the external ID
-    client.create!('Case', Rails_ID__c: @incident.id, Description: @incident.description, Subject: @incident.subject, AccountId: @incident.account.account_number, location__latitude__s: @incident.latitude, location__longitude__s: @incident.longitude, 'Last_Update_From_Portal__c' => true)
+    client.create!('Case', Rails_ID__c: @incident.id, Description: @incident.description, Subject: @incident.subject, AccountId: @incident.account.account_number, location__latitude__s: @incident.latitude, location__longitude__s: @incident.longitude, Last_Update_From_Portal__c: true)
     @incident.incident_number =  client.find('Case', @incident.id, 'Rails_ID__c').CaseNumber
     @incident.save!
   end

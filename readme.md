@@ -1,6 +1,4 @@
 <B>Introduction</B>
-=======
-Introduction
 
 This application is a demonstration to show how Heroku, Salesforce.com and an IOS application can work together to create a compelling customer experience.  It is provided for the study and enjoyment of users. Please note that this is not designed or intended to be a production application.
 
@@ -14,13 +12,9 @@ The portions of this application that have been created by us are covered by the
 
 We hope that you have as much fun in studying this application as we did creating it !
 
-
 <B>Setup Instructions</B>
 
 <i>Salesforce</i>
-Setup Instructions:
-
-Salesforce>>>>>>> 999e70468b27d327ad2e9e1df7bc616c74cc6a2a
 
 Enable Person Accounts in your Salesforce org. Please see Salesforce’s documentation for more details on this.
 
@@ -39,14 +33,6 @@ Update the Heroku Account Details custom settings with the URL for the Heroku ap
 Sign up for a Mapbox account and obtain an access key. This will be required for setting up the Heroku application.
 
 <i>Heroku</i>
-
-Git clone this Github repo
-=======
-Mapbox
-
-Sign up for a Mapbox account and obtain an access key. This will be required for setting up the Heroku application.
-
-Heroku
 
 Git clone this Github repo.
 

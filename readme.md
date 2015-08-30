@@ -1,8 +1,6 @@
-<<<<<<< HEAD
 <B>Introduction</B>
 =======
 Introduction
->>>>>>> 999e70468b27d327ad2e9e1df7bc616c74cc6a2a
 
 This application is a demonstration to show how Heroku, Salesforce.com and an IOS application can work together to create a compelling customer experience.  It is provided for the study and enjoyment of users. Please note that this is not designed or intended to be a production application.
 
@@ -16,19 +14,17 @@ The portions of this application that have been created by us are covered by the
 
 We hope that you have as much fun in studying this application as we did creating it !
 
-<<<<<<< HEAD
+
 <B>Setup Instructions</B>
 
 <i>Salesforce</i>
-=======
 Setup Instructions:
 
-Salesforce
->>>>>>> 999e70468b27d327ad2e9e1df7bc616c74cc6a2a
+Salesforce>>>>>>> 999e70468b27d327ad2e9e1df7bc616c74cc6a2a
 
 Enable Person Accounts in your Salesforce org. Please see Salesforce’s documentation for more details on this.
 
-Deploy the following unmanaged package: https://login.salesforce.com/packaging/installPackage.apexp?p0=04t1a000000EYnz
+Deploy the following unmanaged package: https://login.salesforce.com/packaging/installPackage.apexp?p0=04t1a000000EYo4
 
 Create an user with at least create access on the Account object and create and update rights on the Case object.  Note the username, password and API token for this user as these will be required as part of setting up the Heroku application.
 
@@ -38,8 +34,6 @@ Update the Remote Site for the 'IncidentManager' record with the URL settings fo
 
 Update the Heroku Account Details custom settings with the URL for the Heroku application, and username and password for the Heroku integration user.
 
-
-<<<<<<< HEAD
 <i>Mapbox</i>
 
 Sign up for a Mapbox account and obtain an access key. This will be required for setting up the Heroku application.
@@ -54,8 +48,7 @@ Sign up for a Mapbox account and obtain an access key. This will be required for
 
 Heroku
 
-Git clone the Github repo: xxx.yyy.zzz
->>>>>>> 999e70468b27d327ad2e9e1df7bc616c74cc6a2a
+Git clone this Github repo.
 
 Run the unit tests (rake) to confirm that the application is correctly deployed. 
 
@@ -64,11 +57,7 @@ Note that a asset precompile (rake assets:precompile) will be required if assets
 The following environment variables need to be set, both locally and within the Heroku settings:
 
 |Key|Value|
-<<<<<<< HEAD
 |---|------|
-=======
-----------|
->>>>>>> 999e70468b27d327ad2e9e1df7bc616c74cc6a2a
 |MAPBOX_ACCESS_TOKEN|	The Mapbox key associated with the Mapbox account.|
 |SALESFORCE_USERNAME|	The username of the Salesforce user that will be used for API calls.|
 |SALESFORCE_PASSWORD|	The password of the above user.|
@@ -76,11 +65,7 @@ The following environment variables need to be set, both locally and within the 
 |SALESFORCE_CLIENT_ID|	The Client ID of the connected application that was created in the Salesforce setup.|
 |SALESFORCE_CLIENT_SECRET|	The client secret of the connected application.|
 
-<<<<<<< HEAD
 <B>Troubleshooting</B>
-=======
-Troubleshooting:
->>>>>>> 999e70468b27d327ad2e9e1df7bc616c74cc6a2a
 
 The Salesforce.com application logs errors into the Incident Manager Call Log object. View its tab to confirm that the integration between Salesforce and the Heroku application is functioning correctly. 
 

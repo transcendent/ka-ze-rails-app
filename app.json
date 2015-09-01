@@ -2,7 +2,7 @@
   "name": "Ka-ze",
   "description": "Demonstrates Heroku and Salesforce integration.",
   "repository": "https://github.com/transcendent/ka-ze-rails-app",
-  "logo": "https://github.com/transcendent/ka-ze-rails-app/blob/master/deploy_logo.png",
+  "logo": "https://raw.githubusercontent.com/transcendent/ka-ze-rails-app/master/deploy_logo.png",
   "keywords": ["Salesforce", "Rails", "Ka-ze"],
   "success_url": "/",
   "scripts": {

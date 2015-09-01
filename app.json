@@ -1,0 +1,39 @@
+{
+  "name": "Ka-ze",
+  "description": "Demonstrates Heroku and Salesforce integration.",
+  "repository": "https://github.com/transcendent/ka-ze-rails-app",
+  "logo": "https://github.com/transcendent/ka-ze-rails-app/blob/master/app/assets/images/logo_top.png",
+  "keywords": ["Salesforce", "Rails", "Ka-ze"],
+  "success_url": "/",
+  "scripts": {
+    "postdeploy": "bundle exec rake bundle exec rake db:migrate db:seed"
+  },
+  {
+    "env": {
+      "MAPBOX_ACCESS_TOKEN": {
+        "description": "The Mapbox key associated with the Mapbox account.",
+        "value:""
+      },
+      "SALESFORCE_USERNAME": {
+        "description": "The username of the Salesforce user that will be used for API calls.",
+        "value:""
+      },
+      "SALESFORCE_PASSWORD": {
+        "description": "The password of the above user.",
+        "value:""
+      },      
+      "SALESFORCE_SECURITY_TOKEN": {
+        "description": "The security token associated with the user.",
+        "value:""
+      },
+      "SALESFORCE_CLIENT_ID": {
+        "description": "The Client ID of the connected application that was created in the Salesforce setup.",
+        "value:""
+      },
+      "SALESFORCE_CLIENT_SECRET": {
+        "description": "The client secret of the connected application.",
+        "value:""
+      },
+    }
+  }
+}

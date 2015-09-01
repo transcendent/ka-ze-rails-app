@@ -6,7 +6,7 @@
   "keywords": ["Salesforce", "Rails", "Ka-ze"],
   "success_url": "/",
   "scripts": {
-    "postdeploy": "bundle exec rake bundle exec rake db:migrate db:seed"
+    "postdeploy": "bundle exec rake db:migrate db:seed"
   },
   	"env": { 
     "SALESFORCE_USERNAME": {

@@ -12,6 +12,8 @@ The portions of this application that have been created by us are covered by the
 
 We hope that you have as much fun in studying this application as we did creating it !
 
+[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
+
 <B>Setup Instructions</B>
 
 <i>Salesforce</i>

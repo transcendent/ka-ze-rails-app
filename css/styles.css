@@ -26,16 +26,14 @@ blockquote {
 }
 
 .jumbotron {
-    margin-top: -20px;
+    margin-top: 20px;
     padding: 0;
-    /*padding-top: 30px;*/
-    /*background-color: #01344e;*/
     color: #ffffff;
     background: #ffffff url("../images/background.jpg") no-repeat right top;
     background-repeat: no-repeat;
     background-size: 100%;
     background-origin: content-box;
-    height: 330px;
+    height: 220px;
 }
 
 

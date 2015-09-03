@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+
+    <title>Ka-ze</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="css/styles.css" rel="stylesheet">
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+	<div class="navbar navbar-default navbar-static-top" role="navigation">
+	    <div class="container">
+	        <div class="navbar-header">
+	            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	                <span class="sr-only">Toggle navigation</span>
+	                <span class="icon-bar"></span>
+	                <span class="icon-bar"></span>
+	                <span class="icon-bar"></span>
+	            </button>
+	            <a class="navbar-brand" href="index.html">Ka-ze</a>
+	        </div>
+	        <div class="navbar-collapse collapse">
+	            <ul class="nav navbar-nav">
+	                <li><a href="walkthrough.html">Walkthrough</a></li>
+	                <li><a href="architecture.html">Architecture</a></li>
+	                <li><a href="setup.html">Setup</a></li>
+	            </ul>
+	            <ul class="nav navbar-nav navbar-right">
+	                <li><a
+	                        href="https://github.com/transcendent/ka-ze-rails-app"><img
+	                        src="images/icon-github.png" style="border: none;margin: -4px 0;height: 28px;width: 28px;"/>
+	                    GitHub
+	                    Project</a></li>
+	            </ul>
+	        </div><!--/.nav-collapse -->
+	    </div>
+	</div>
+
+<div class="container">
+
+<div class="row">
+
+    <div class="col-xs-12">
+        <h1>Architecture</h1>
+        <!--<hr/>-->
+        <p><img src="images/architecture-diagram.png" style="height:600px;"</p>
+
+<p>Ka-ze uses a number of different architectural components to create an end-to-end experience.<p>
+
+<h2>Heroku Web Portal</h2>
+<p>Our web portal is built on Ruby on Rails using tools such as <a href="https://github.com/ejholmes/restforce">RestForce</a> and <a href="https://github.com/plataformatec/devise">Devise</a>. We use a number of Javascript libraries, including <a href="http://getbootstrap.com/">Bootstrap</a>, to provide a more responsive and tailored user interface. We also use Mapbox to allow the user to select a location on a map.</p>
+
+<p>We use RestForce to synchronize account and case data (via the Force.com APIs) with Salesforce.</p>
+
+<h2>IOS Application</h2>
+
+<p>Our IOS application, written in <a href="http://www.apple.com/ca/swift/?cid=wwa-ca-kwg-features">Swift</a>, pulls case information from Heroku and surfaces it using native UIKit components. This allows a user to review open cases near them, comment on them and potentially close the cases.</p>
+
+
+    </div>
+
+</div>
+
+</div>
+
+<div class="container">
+    <div id="footer">
+        <p class="text-muted">Deloitte Inc, 2014.</p>
+    </div>    <!-- Site footer -->
+</div>
+
+
+<script src="lib/jquery.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>

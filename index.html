@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+
+    <title>Ka-ze</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="css/styles.css" rel="stylesheet">
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+<div class="navbar navbar-default navbar-static-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">Ka-ze</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="walkthrough.html">Walkthrough</a></li>
+                <li><a href="architecture.html">Architecture</a></li>
+                <li><a href="setup.html">Setup</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a
+                        href="https://github.com/transcendent/ka-ze-rails-app"><img
+                        src="images/icon-github.png" style="border: none;margin: -4px 0;height: 28px;width: 28px;"/>
+                    GitHub
+                    Project</a></li>
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div>
+</div>
+
+<div class="jumbotron">
+    <div class="container">
+        <div class="row" style="text-align: center">
+            <img src="images/logo.png" style="border:none;"/>
+            <h1>Ka-ze : Creating Compelling UXs with Heroku</h1>
+        </div>
+    </div>
+</div>
+
+<div style="background-color: #f4f4f4;margin-top: -30px;border-bottom: solid 1px #ddd;padding:12px 0 6px 0;margin-bottom:30px;">
+    <div class="container">
+        <div class="row" style="text-align: center">
+            <div style="margin-left: 30px;">
+                <a href="https://twitter.com/share" class="twitter-share-button" data-size="large"
+                   data-url="https://github.com/transcendent/ka-ze-rails-app"
+                   data-text="Ka-ze - creating compellings UXs with Heroku, Salesforce and IOS #DeloitteDigital">Tweet</a>
+                <script>!function (d, s, id) {
+                    var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
+                    if (!d.getElementById(id)) {
+                        js = d.createElement(s);
+                        js.id = id;
+                        js.src = p + '://platform.twitter.com/widgets.js';
+                        fjs.parentNode.insertBefore(js, fjs);
+                    }
+                }(document, 'script', 'twitter-wjs');</script>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+			<p>Ka-ze is a example application to show how <a href="http://www.heroku.com">Heroku</a>, <a href="http://www.salesforce.com">Salesforce</a> and open source tools can work together to create compelling customer experiences. Using a sample municipal incident management use case, users can raise geolocated incidents via a web portal, which can be actioned and resolved in Salesforce and in a custom native mobile application.</p>
+        	<p>You can use the Deploy to Heroku button below to create your own instance of Ka-ze:</p>
+			<p><a href="https://heroku.com/deploy?template=https://github.com/transcendent/ka-ze-rails-app"><img src="https://www.herokucdn.com/deploy/button.png" alt="Deploy"></a></p>
+			<p>Please see our <a href="https://github.com/transcendent/ka-ze-rails-app">readme</a> file for more information on Ka-ze, including setup steps and requirements. Please also see our related <a href="https://github.com/transcendent/Ka-Ze-IOS-App">Github project</a> for information on the mobile application.
+			<p>Here's some of the tools that we used to create Ka-ze:</p>
+		</div>
+    </div>
+</div>
+
+<div class="container">
+
+    <div class="row" style="padding-top: 4px;">
+        <div class="col-lg-3">
+            <div class="text-center">
+                <img src="images/platform-force-cloud.png"/>
+                <h3>Force.com</h3>
+            </div>
+            <p>Force.com is a suite of point-and-click tools that make creating custom employee-facing apps lightning fast. Ka-ze uses Force.com to provide an internal employee interface where they can work and resolve incidents raised on the web portal. </p>
+        </div>
+        <div class="col-lg-3">
+            <div class="text-center">
+                <img src="images/platform-heroku-logo.png"/>
+                <h3>Heroku</h3>
+            </div>
+            <p>Heroku provides the platform-as-a-service to power a compelling customer experience. We use Heroku to host our web-facing components, run our application code, interface with the Force.com APIs, and expose services for our custom mobile application.</p>
+        </div>
+        <div class="col-lg-3">
+            <div class="text-center">
+                <img src="images/Ruby-on-Rails.png"/>
+                <h3>Ruby on Rails</h3>
+            </div>
+            <p>Ruby on Rails is an open-source web framework that’s optimized for programmer happiness and sustainable productivity. It lets you write beautiful code by favoring convention over configuration. Ka-ze uses Ruby on Rails as its underlying application framework.</p>
+        </div>
+        <div class="col-lg-3">
+            <div class="text-center">
+                <img src="images/bootstrap.png"/>
+                <h3>Bootstrap</h3>
+            </div>
+            <p>Bootstrap is the most popular HTML, CSS, and JS framework for developing responsive, mobile first projects on the web. We’ve used Bootstrap for the core web application styling and a responsive layout.</p>
+        </div>
+    </div>
+
+
+
+
+</div>
+
+
+<div class="container">
+    
+</div>
+
+<div class="container">
+    <div id="footer">
+        <p class="text-muted">Delotte Inc, 2015.</p>
+    </div>    <!-- Site footer -->
+</div>
+
+
+<script src="lib/jquery.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>

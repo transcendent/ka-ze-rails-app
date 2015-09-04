@@ -26,29 +26,34 @@ blockquote {
 }
 
 .jumbotron {
-    margin-top: 20px;
-    padding: 0;
     color: #ffffff;
-    background: #ffffff url("../images/background.jpg") no-repeat right top;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-origin: content-box;
-    height: 220px;
+    background: #ffffff url("../images/background.jpg") ;
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
-
-
 .jumbotron h1 {
-    font-size: 28px;
     margin-top:12px;
     /*font-weight: 400;*/
     /*font-style: normal;*/
-    font-family: ProximaNovaLight, Arial, sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 150px;
 }
 
-/*.navbar {*/
-/*background-color: #01344e;*/
-/*}*/
+.jumbotron h2 {
+    margin-top:12px;
+    font-weight: 300;
+    font-style: italic;
+	text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+	border-bottom: none;
+    font-size: 30px;
+}
+
+.navbar {
+  	margin-bottom: 0px;
+}
 
 /*.navbar-default .navbar-nav>li>a,*/
 /*.navbar-default .navbar-brand {*/
@@ -107,7 +112,7 @@ blockquote {
 }
 
 h1 {
-	color: #33962A !important;
+	color: #33962A;
 }
 
 h2 {

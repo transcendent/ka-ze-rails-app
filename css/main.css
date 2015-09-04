@@ -15,6 +15,7 @@ html, body { height: 100%; }
 body {
   background-color: #FFF;
   font: 13.34px Helvetica, Arial, sans-serif;
+  background: #ffffff url("../images/background.jpg") no-repeat right top;
   font-size: small;
   text-align: center;
 }

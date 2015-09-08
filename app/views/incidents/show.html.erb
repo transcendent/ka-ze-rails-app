@@ -30,7 +30,13 @@
 			<div class="form-group">
 				<label class="control-label col-sm-2">Closed ?</label>
 				<div class="col-sm-10">
-					<p class="form-control-static"><%= @incident.is_closed %></p>
+					<p class="form-control-static">
+					<% if @incident.is_closed %> 
+						Yes
+					<% else %>
+						No
+					<% end %>
+					</p>
 				</div>
 			</div>
 			<span class="field-separator col-xs-12"></span>
